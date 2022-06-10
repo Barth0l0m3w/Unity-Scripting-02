@@ -20,9 +20,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        PlayerMoving();
+    }
+
+    private void PlayerMoving()
+    {
         rb.velocity = transform.forward * Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
-
         transform.Rotate(0, Input.GetAxis("Mouse X") * turnSpeed, 0);
-
     }
 }
