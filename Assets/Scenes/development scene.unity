@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 1205267341}
   - component: {fileID: 1205267340}
   - component: {fileID: 1205267339}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 1666400521}
   - component: {fileID: 1666400520}
   - component: {fileID: 1666400519}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,6 +753,7 @@ GameObject:
   - component: {fileID: 1710386451}
   - component: {fileID: 1710386450}
   - component: {fileID: 1710386449}
+  - component: {fileID: 1710386455}
   m_Layer: 0
   m_Name: Cube tester
   m_TagString: Untagged
@@ -867,3 +868,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1710386455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710386448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c3ea1453322a334d97060179e9e65cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidable:
+    serializedVersion: 2
+    m_Bits: 8
+  collider: {fileID: 1710386451}
+  maxOffser: 0.02
+  blockedForward: 0
+  blockedUp: 0
+  blockedDown: 0
+  blockedBack: 0
+  blockedLeft: 0
+  blockedRight: 0
