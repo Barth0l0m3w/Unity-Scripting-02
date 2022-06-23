@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class ControlObjects : MonoBehaviour
 {
+    private AntiClipping[] antiClippings = null;
+
     public bool isHittingObjects = false;
 
     private Vector3 mOffset;
     private float mZCoord;
-    AntiClipping antiClipping;
     Vector3 previousPosition;
 
     private void Start()
     {
-        antiClipping = GetComponent<AntiClipping>();
+        antiClippings = GetComponentsInChildren<AntiClipping>();
     }
 
     void Update()
@@ -59,33 +60,68 @@ public class ControlObjects : MonoBehaviour
 
     private void BlockMovement()
     {
+        bool blockForward = false;
+        bool blockBackward  = false;
+        bool blockUp = false;
+        bool blockDown = false;
+        bool blockLeft = false;
+        bool blockRight = false;
+
+        foreach(AntiClipping clipping in antiClippings)
+        {
+            if (clipping.blockedForward)
+            {
+                blockForward = true;
+            }
+            if (clipping.blockedBack)
+            {
+                blockBackward = true;
+            }
+            if (clipping.blockedUp)
+            {
+                blockUp = true;
+            }
+            if (clipping.blockedDown)
+            {
+                blockDown = true;
+            }
+            if (clipping.blockedLeft)
+            {
+                blockLeft = true;
+            }
+            if (clipping.blockedRight)
+            {
+                blockRight = true;
+            }
+        }
+
         //if the ray is hit and you try to drag the object further it will jump back to the previous position so it doesnt clip
         //forwards and backwards
-        if (antiClipping.blockedForward && (transform.position.z > previousPosition.z))
+        if (blockForward && (transform.position.z > previousPosition.z))
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, previousPosition.z);
         }
-        if (antiClipping.blockedBack && (transform.position.z < previousPosition.z))
+        if (blockBackward && (transform.position.z < previousPosition.z))
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, previousPosition.z);
         }
 
         //up and down
-        if (antiClipping.blockedUp && (transform.position.y > previousPosition.y))
+        if (blockUp && (transform.position.y > previousPosition.y))
         {
             transform.position = new Vector3(transform.position.x, previousPosition.y, transform.position.z);
         }
-        if (antiClipping.blockedDown && (transform.position.y < previousPosition.y))
+        if (blockDown && (transform.position.y < previousPosition.y))
         {
             transform.position = new Vector3(transform.position.x, previousPosition.y, transform.position.z);
         }
 
         //right and left
-        if (antiClipping.blockedRight && (transform.position.x > previousPosition.x))
+        if (blockLeft && (transform.position.x > previousPosition.x))
         {
             transform.position = new Vector3(previousPosition.x, transform.position.y, transform.position.z);
         }
-        if (antiClipping.blockedRight && (transform.position.x < previousPosition.x))
+        if (blockRight && (transform.position.x < previousPosition.x))
         {
             transform.position = new Vector3(previousPosition.x, transform.position.y, transform.position.z);
         }
