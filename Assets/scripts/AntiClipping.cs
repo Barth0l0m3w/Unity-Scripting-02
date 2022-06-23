@@ -7,7 +7,6 @@ public class AntiClipping : MonoBehaviour
     public LayerMask collidable;
     public new Collider collider;
     public float maxOffser = 0.05f;
-    public Transform rayOrigin;
 
     [HideInInspector] public bool blockedForward = false;
     [HideInInspector] public bool blockedUp = false;
@@ -30,9 +29,9 @@ public class AntiClipping : MonoBehaviour
 
     public RaycastHit StopMoving(Vector3 direction)
     {
-        if (rayOrigin == null) return new RaycastHit();
+        if (transform == null) return new RaycastHit();
 
-        Vector3 origin = rayOrigin.position;
+        Vector3 origin = transform.position;
         RaycastHit hit;
         Physics.Raycast(origin, direction, out hit, collider.bounds.extents.x + maxOffser);
         
@@ -42,9 +41,7 @@ public class AntiClipping : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (rayOrigin == null) return;
-
-        Vector3 origin = rayOrigin.position;
+        Vector3 origin = transform.position;
         
         Gizmos.DrawRay(origin, Vector3.up * (collider.bounds.extents.x + maxOffser));
         Gizmos.DrawRay(origin, Vector3.down * (collider.bounds.extents.x + maxOffser));
