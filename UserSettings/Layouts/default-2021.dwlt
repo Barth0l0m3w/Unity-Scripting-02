@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 29
+  controlID: 100
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 72
+  controlID: 127
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 73
+  controlID: 128
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -334,7 +334,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 780dfcffa83afcff9a3dfcfff03dfcfff63dfcff2c3ffcff863ffcff2041fcff244dfcffc45cfcff9466fcff4a88fcff0ce9fcff98e9fcff0cfbffffe8980000fe9a00000e9b0000daa90000
+      m_ExpandedIDs: 5407feffc8f9ffff04faffff20fafffff6faffff0cfbffff4a630000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -440,22 +440,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/prefabs/environment
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/prefabs/environment
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\courses\Term 4\Unity Scripting\unity scripting 03\Unity-Scripting-02
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 67}
-    m_SelectedIDs: dc650000
-    m_LastClickedID: 26076
-    m_ExpandedIDs: 00000000886400008a6400008c6400008e64000092640000d8650000009800001e98000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: d28f0000
+    m_LastClickedID: 36818
+    m_ExpandedIDs: 000000002c6500002e6500003065000032650000346500003c650000426500007467000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -483,7 +483,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000886400008a6400008c6400008e6400009064000092640000
+    m_ExpandedIDs: 000000002c6500002e65000030650000326500003465000036650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -759,14 +759,14 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 459.43497, y: 223.10205, z: -7.325234}
+    m_Target: {x: -14.305849, y: 8.0821, z: -10.960383}
     speed: 2
-    m_Value: {x: 459.43497, y: 223.10205, z: -7.325234}
+    m_Value: {x: -14.305849, y: 8.0821, z: -10.960383}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -795,17 +795,17 @@ MonoBehaviour:
       m_Size: {x: 0, y: 0}
     yGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -813,20 +813,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.34002122, y: -0.48231095, z: 0.21035291, w: -0.7794867}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.34032175, y: -0.48112047, z: 0.20983362, w: -0.78017575}
   m_Size:
-    m_Target: 239.59184
+    m_Target: 14.859036
     speed: 2
-    m_Value: 239.59184
+    m_Value: 14.219173
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
-    m_Speed: 1
-    m_SpeedNormalized: 0.5
+    m_Speed: 1.0249
+    m_SpeedNormalized: 0.51
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -837,7 +837,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.37642926, y: -0.21513689, z: 0.09032513, w: 0.8965812}
+  m_LastSceneViewRotation: {x: -0.19350858, y: 0.7447039, z: -0.24415599, w: -0.590238}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
