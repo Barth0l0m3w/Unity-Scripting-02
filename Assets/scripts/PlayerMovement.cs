@@ -9,10 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float moveSpeed;
-
     public float turnSpeed;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -25,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
         usingRaycast();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         PlayerMoving();

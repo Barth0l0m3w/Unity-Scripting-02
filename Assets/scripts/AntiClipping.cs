@@ -8,6 +8,7 @@ public class AntiClipping : MonoBehaviour
     public new Collider collider;
     public float maxOffser = 0.05f;
 
+    //boolians to block the direction whenever one of the raycasts hits
     [HideInInspector] public bool blockedForward = false;
     [HideInInspector] public bool blockedUp = false;
     [HideInInspector] public bool blockedDown = false;
@@ -15,10 +16,9 @@ public class AntiClipping : MonoBehaviour
     [HideInInspector] public bool blockedLeft = false;
     [HideInInspector] public bool blockedRight = false;
 
-    // Update is called once per frame
+
     void Update()
     {
-
         blockedForward = StopMoving(Vector3.forward).collider != null;
         blockedUp = StopMoving(Vector3.up).collider != null;
         blockedDown = StopMoving(Vector3.down).collider != null;
@@ -34,7 +34,6 @@ public class AntiClipping : MonoBehaviour
         Vector3 origin = transform.position;
         RaycastHit hit;
         Physics.Raycast(origin, direction, out hit, collider.bounds.extents.x + maxOffser);
-        
 
         return hit;
     }
@@ -42,7 +41,7 @@ public class AntiClipping : MonoBehaviour
     private void OnDrawGizmos()
     {
         Vector3 origin = transform.position;
-        
+
         Gizmos.DrawRay(origin, Vector3.up * (collider.bounds.extents.x + maxOffser));
         Gizmos.DrawRay(origin, Vector3.down * (collider.bounds.extents.x + maxOffser));
         Gizmos.DrawRay(origin, Vector3.left * (collider.bounds.extents.x + maxOffser));

@@ -14,10 +14,10 @@ public class Patroller : MonoBehaviour
     void Start()
     {
         waypointIndex = 0;
+        //make the enemy look at where they are going
         transform.LookAt(waypoints[waypointIndex].position);
     }
 
-    // Update is called once per frame
     void Update()
     {
         dist = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
@@ -30,16 +30,20 @@ public class Patroller : MonoBehaviour
 
     private void Patrol()
     {
+        //move towards the waypoint
         transform.Translate(Vector3.forward * enemySpeed * Time.deltaTime);
     }
 
     private void IncreaseIndex()
     {
+        //going to the next waypoint in the array
         waypointIndex++;
+        //when having reached the last waypoint reset it to the first one to create a loop
         if(waypointIndex >= waypoints.Length)
         {
             waypointIndex = 0;
         }
+        //make the enemy face the next waypoint when switching
         transform.LookAt(waypoints[waypointIndex].position);
     }
 }
