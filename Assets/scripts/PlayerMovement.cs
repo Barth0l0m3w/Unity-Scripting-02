@@ -34,21 +34,24 @@ public class PlayerMovement : MonoBehaviour
     private void PlayerMoving()
     {
         rb.velocity = transform.forward * Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
-        
+
         transform.Rotate(0, Input.GetAxisRaw("Mouse X") * turnSpeed, 0);
     }
 
     private void usingRaycast()
     {
         RaycastHit hit = raycast.TouchingObjects(10);
-        GameObject obj = hit.collider.gameObject;
-
-        if (obj != null)
+        if (hit.collider != null)
         {
-            ControlObjects ctrl = obj.GetComponent<ControlObjects>();
-            if (ctrl != null)
+            GameObject obj = hit.collider.gameObject;
+
+            if (obj != null)
             {
-                ctrl.isHittingObjects = true;
+                ControlObjects ctrl = obj.GetComponent<ControlObjects>();
+                if (ctrl != null)
+                {
+                    ctrl.isHittingObjects = true;
+                }
             }
         }
     }
