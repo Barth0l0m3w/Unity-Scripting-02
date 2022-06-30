@@ -9,6 +9,7 @@ public class Patroller : MonoBehaviour
 
     private int waypointIndex;
     private float dist;
+    public float maxDist = 1.3f;
 
     void Start()
     {
@@ -20,7 +21,7 @@ public class Patroller : MonoBehaviour
     void Update()
     {
         dist = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
-        if(dist < 1.3f)
+        if(dist < maxDist)
         {
             IncreaseIndex();
         }
