@@ -669,7 +669,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: e9089b1db16b58f4282a94e020b9c0e8, type: 3}
       propertyPath: m_Name
-      value: Rock_01 Variant
+      value: Movable Rock 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e9089b1db16b58f4282a94e020b9c0e8, type: 3}
       propertyPath: m_RootOrder
@@ -734,7 +734,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: e9089b1db16b58f4282a94e020b9c0e8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6a964b1ad40839f4b90cce25f1fda165, type: 2}
+      objectReference: {fileID: 2100000, guid: bff386fda38cb7c45a654d5f020bfa93, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9089b1db16b58f4282a94e020b9c0e8, type: 3}
 --- !u!4 &1996719381743345333 stripped

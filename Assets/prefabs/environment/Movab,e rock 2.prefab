@@ -119,7 +119,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_Name
-      value: Rock_04 Variant
+      value: Movab,e rock 2
       objectReference: {fileID: 0}
     - target: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_Layer
@@ -196,7 +196,7 @@ PrefabInstance:
     - target: {fileID: 8783306491910875155, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6a964b1ad40839f4b90cce25f1fda165, type: 2}
+      objectReference: {fileID: 2100000, guid: bff386fda38cb7c45a654d5f020bfa93, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
 --- !u!4 &2494864035990989902 stripped
