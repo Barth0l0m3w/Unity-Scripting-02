@@ -9,10 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float moveSpeed;
-
     public float turnSpeed;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -25,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
         usingRaycast();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         PlayerMoving();
@@ -34,21 +31,24 @@ public class PlayerMovement : MonoBehaviour
     private void PlayerMoving()
     {
         rb.velocity = transform.forward * Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
-        
+
         transform.Rotate(0, Input.GetAxisRaw("Mouse X") * turnSpeed, 0);
     }
 
     private void usingRaycast()
     {
         RaycastHit hit = raycast.TouchingObjects(10);
-        GameObject obj = hit.collider.gameObject;
-
-        if (obj != null)
+        if (hit.collider != null)
         {
-            ControlObjects ctrl = obj.GetComponent<ControlObjects>();
-            if (ctrl != null)
+            GameObject obj = hit.collider.gameObject;
+
+            if (obj != null)
             {
-                ctrl.isHittingObjects = true;
+                ControlObjects ctrl = obj.GetComponent<ControlObjects>();
+                if (ctrl != null)
+                {
+                    ctrl.isHittingObjects = true;
+                }
             }
         }
     }
